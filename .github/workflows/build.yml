@@ -1,0 +1,30 @@
+name: TooManyRequestsHandler Build Pipeline
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Checking Out Code
+      uses: actions/checkout@v3
+      
+    - name: Installing .NET Versions
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: |
+          6.0.x
+          5.0.x
+      
+    - name: Restore NuGet packages for Solution
+      run: dotnet restore TooManyRequestsHandler.sln --verbosity normal
+      
+    - name: Build Class Library Project
+      run: dotnet build .\TooManyRequestsHandler\TooManyRequestsHandler.csproj --no-restore --framework net6.0 --verbosity normal
+   
+    - name: Build Class Library Project
+      run: dotnet build .\TooManyRequestsHandler\TooManyRequestsHandler.csproj --no-restore --framework net5.0 --verbosity normal
