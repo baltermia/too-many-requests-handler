@@ -1,5 +1,12 @@
-# TooManyRequestsHandler
-> A simple HttpClientHandler which handles HTTP 429 (TooManyRequest) and also allows parallel pausing.
+<div align=center>
+<h1>TooManyRequestsHandler</h1>
+
+[![Nuget](https://img.shields.io/nuget/v/TooManyRequestsHandler?style=flat-square)](https://www.nuget.org/packages/TooManyRequestsHandler/)
+[![Downloads](https://img.shields.io/nuget/dt/TooManyRequestsHandler.svg?style=flat-square)](https://www.nuget.org/packages/TooManyRequestsHandler/)
+[![Build](https://img.shields.io/github/actions/workflow/status/baltermia/too-many-requests-handler/build.yml?style=flat-square)](https://github.com/baltermia/too-many-requests-handler/actions/workflows/build.yml)
+
+A simple HttpClientHandler which handles HTTP 429 (TooManyRequest) and also allows parallel pausing.
+</div>
 
 ## How to Use
 
